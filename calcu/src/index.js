@@ -10,3 +10,8 @@ root.render(
   </React.StrictMode>
 );
 
+/*Youtube tutorial from Tyler Pots 
+
+Build a CALCULATOR APP in REACT JS | A React JS Beginner Tutorial
+https://www.youtube.com/watch?v=oiX-6Y2oGjI
+*/

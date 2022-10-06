@@ -1,4 +1,5 @@
 import {useState} from 'react';
+/* eslint no-eval: 0 */ //removing warning
 
 function App() {
 	const[calc,setCalc] =useState("");
@@ -8,8 +9,8 @@ function App() {
 
 	const updateCalc = value =>{
 		if(
-			ops.includes(value) && calc === '' ||
-			ops.includes(value) && ops.includes(calc.slice(-1)
+			(ops.includes(value) && calc === '') ||
+			(ops.includes(value) && ops.includes(calc.slice(-1))
 			)
 		){
 			return;
@@ -19,7 +20,7 @@ function App() {
 			setResult(eval(calc+value).toString());
 		}
 	}
-
+	//program to add numbers into calc
 	const createDigits = () => {
 		const digits = [];
 
@@ -39,9 +40,9 @@ function App() {
 	const calculate = () => {
 		setCalc(eval(calc).toString())
 	}
-
+	//makes DEL works
 	const	deleteLast = () => {
-		if(calc== ''){
+		if(calc=== ''){
 			return;
 		}
 		const value = calc.slice(0, -1);
